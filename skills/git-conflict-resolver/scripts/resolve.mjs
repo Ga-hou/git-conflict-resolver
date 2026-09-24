@@ -566,8 +566,8 @@ export function main(argv = process.argv.slice(2)) {
     fail(`Unknown command: ${options.command}`);
   });
 }
-// Resolve symlinked directories, including macOS /var -> /private/var, for CLI detection.
-if (process.argv[1] && fs.existsSync(process.argv[1]) && fs.realpathSync(process.argv[1]) === fs.realpathSync(fileURLToPath(import.meta.url))) {
+// Resolve symlinked directories and Windows short paths before checking the CLI entrypoint.
+if (process.argv[1] && fs.existsSync(process.argv[1]) && fs.realpathSync.native(process.argv[1]) === fs.realpathSync.native(fileURLToPath(import.meta.url))) {
   try { const result = main(); console.log(json(result)); if (result.ok === false) process.exitCode = 2; }
   catch (e) { console.error(json({ ok: false, error: e.message })); process.exitCode = 1; }
 }

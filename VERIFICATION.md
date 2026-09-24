@@ -37,6 +37,8 @@ Original native-clean-merge unit cases include deliberately constructed unmerged
 
 The first macOS run exposed a CLI entrypoint bug: Node resolved the installed script through `/private/var`, while the command-line path used `/var`. The script exited without invoking the CLI. Entry detection now compares real filesystem paths, and the installer test also checks an explicit directory symlink (a junction on Windows). The full suite passed after the fix.
 
+The initial Windows CI run also exposed a long/short-path comparison in the worktree test and a silent directory-copy failure when the installation path contained Chinese characters. The test and CLI entrypoint now use native realpath normalization. The installer supplies a pass-through filter to use Node's JavaScript copy traversal, avoiding the [documented Windows Unicode-path issue](https://github.com/nodejs/node/issues/61878). The Unicode installation and linked-directory checks remain enabled on Windows.
+
 Evidence: [macos-node22.tap](verification/macos-node22.tap), [macos-check.txt](verification/macos-check.txt), [macos-demo.json](verification/macos-demo.json).
 
 ## CI and publishing

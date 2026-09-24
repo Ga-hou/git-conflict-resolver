@@ -184,7 +184,7 @@ test('linked worktrees use their own actual Git directory and accept a subdirect
   fs.mkdirSync(path.join(worktree, 'inside'));
   const r = run(path.join(worktree, 'inside'), 'prepare');
   assert.ok(r.context.includes(`${path.sep}worktrees${path.sep}`));
-  assert.equal(manifest(r).repository, fs.realpathSync(worktree));
+  assert.equal(fs.realpathSync.native(manifest(r).repository), fs.realpathSync.native(worktree));
 });
 test('submodule divergence merges locally, keeps parent conflict, and pins only after commit', () => {
   const { repo, child, name, ours, theirs } = submoduleConflict(); run(repo);
@@ -295,7 +295,7 @@ test('installer copies a self-contained skill and refuses silent replacement', (
   const first = spawnSync(process.execPath, [script, '--to', target], { encoding: 'utf8' });
   assert.equal(first.status, 0, first.stderr);
   const installed = path.join(target, 'git-conflict-resolver');
-  assert.ok(fs.existsSync(path.join(installed, 'scripts/resolve.mjs')));
+  assert.ok(fs.existsSync(path.join(installed, 'scripts/resolve.mjs')), first.stdout);
   const help = spawnSync(process.execPath, [path.join(installed, 'scripts/resolve.mjs'), 'help'], { encoding: 'utf8' });
   assert.equal(help.status, 0, help.stderr); assert.ok(JSON.parse(help.stdout).usage.length);
   const linked = path.join(target, 'linked-skill');

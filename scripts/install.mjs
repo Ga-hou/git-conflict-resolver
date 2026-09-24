@@ -15,7 +15,8 @@ if (args.length !== 2 || args[0] !== '--to') {
     if (fs.existsSync(target)) throw new Error(`Destination exists: ${target}. Review/remove or move the old installation explicitly; it was not overwritten.`);
     if (target === source || target.startsWith(source + path.sep)) throw new Error('Destination cannot be inside the source skill');
     fs.mkdirSync(parent, { recursive: true });
-    fs.cpSync(source, target, { recursive: true, errorOnExist: true, force: false, dereference: false });
+    // Use Node's JS traversal to avoid the Windows Unicode-path copy bug: nodejs/node#61878.
+    fs.cpSync(source, target, { recursive: true, errorOnExist: true, force: false, dereference: false, filter: () => true });
     console.log(JSON.stringify({ installed: true, directory: target, entry: path.join(target, 'SKILL.md') }, null, 2));
   } catch (e) { console.error(e.message); process.exitCode = 1; }
 }
