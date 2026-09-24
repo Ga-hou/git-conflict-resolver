@@ -1,0 +1,5 @@
+
+> git-conflict-resolver@0.2.0 check
+> node scripts/check.mjs
+
+Checked 10 JavaScript files, skill metadata and vendored hashes.

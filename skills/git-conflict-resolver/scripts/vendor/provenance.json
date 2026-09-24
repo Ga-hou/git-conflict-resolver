@@ -1,0 +1,23 @@
+{
+  "project": "bhousel/node-diff3",
+  "sourceCommit": "8226c27e074909241d72276c21215505a931665f",
+  "sourcePath": "src/diff3.mjs",
+  "sourceGitBlobSHA1": "7b43ba56eaf242444384ce940da3cef944761922",
+  "sourceURL": "https://github.com/bhousel/node-diff3/blob/8226c27e074909241d72276c21215505a931665f/src/diff3.mjs",
+  "functions": [
+    "LCS",
+    "diffIndices"
+  ],
+  "license": "MIT",
+  "modifications": "Function bodies retained; other functions and exports omitted; attribution header added. This is an excerpt, not the original full file.",
+  "files": [
+    {
+      "path": "node-diff3.mjs",
+      "sha256": "75fe1e8f7968740864556c7ef04099b828a3908a010fd2686edf2c7e54050114"
+    },
+    {
+      "path": "node-diff3.LICENSE.md",
+      "sha256": "91b143397ff4e7ae81fcedec96140607189c620bda4fbb85882534922fab0965"
+    }
+  ]
+}

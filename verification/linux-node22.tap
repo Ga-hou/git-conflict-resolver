@@ -1,0 +1,454 @@
+TAP version 13
+# Subtest: REAL merge: native conflict is solved by disjoint-token refinement
+ok 1 - REAL merge: native conflict is solved by disjoint-token refinement
+  ---
+  duration_ms: 204.317953
+  type: 'test'
+  ...
+# Subtest: REAL merge: partial hunk resolution keeps original stage-1/2/3 and BASE markers
+ok 2 - REAL merge: partial hunk resolution keeps original stage-1/2/3 and BASE markers
+  ---
+  duration_ms: 157.655072
+  type: 'test'
+  ...
+# Subtest: partial auto result is idempotent, and later human edits are never replayed over
+ok 3 - partial auto result is idempotent, and later human edits are never replayed over
+  ---
+  duration_ms: 197.113195
+  type: 'test'
+  ...
+# Subtest: dry-run writes candidates and reports but never working files or index
+ok 4 - dry-run writes candidates and reports but never working files or index
+  ---
+  duration_ms: 170.099804
+  type: 'test'
+  ...
+# Subtest: native-only is a real baseline: the same fixture remains unresolved without token refinement
+ok 5 - native-only is a real baseline: the same fixture remains unresolved without token refinement
+  ---
+  duration_ms: 184.28003
+  type: 'test'
+  ...
+# Subtest: pre-existing manual edits prevent new simple-hunk writes
+ok 6 - pre-existing manual edits prevent new simple-hunk writes
+  ---
+  duration_ms: 93.386894
+  type: 'test'
+  ...
+# Subtest: unrelated staged work remains staged and unmodified
+ok 7 - unrelated staged work remains staged and unmodified
+  ---
+  duration_ms: 121.47259
+  type: 'test'
+  ...
+# Subtest: CRLF simple merge retains CRLF on disk and LF in the index
+ok 8 - CRLF simple merge retains CRLF on disk and LF in the index
+  ---
+  duration_ms: 154.628776
+  type: 'test'
+  ...
+# Subtest: REAL rebase conflict uses the same refinement with correct side metadata
+ok 9 - REAL rebase conflict uses the same refinement with correct side metadata
+  ---
+  duration_ms: 161.482497
+  type: 'test'
+  ...
+# Subtest: REAL cherry-pick conflict is refined, without continuing or committing
+ok 10 - REAL cherry-pick conflict is refined, without continuing or committing
+  ---
+  duration_ms: 123.202093
+  type: 'test'
+  ...
+# Subtest: known lockfiles are not sent through generic fine-grained merging
+ok 11 - known lockfiles are not sent through generic fine-grained merging
+  ---
+  duration_ms: 106.175519
+  type: 'test'
+  ...
+# Subtest: snapshot tampering is rejected before applying simple changes
+ok 12 - snapshot tampering is rejected before applying simple changes
+  ---
+  duration_ms: 117.149282
+  type: 'test'
+  ...
+# Subtest: REAL native conflict without a final newline preserves absent final newline
+ok 13 - REAL native conflict without a final newline preserves absent final newline
+  ---
+  duration_ms: 97.117487
+  type: 'test'
+  ...
+# Subtest: true same-token conflict is unchanged, not selected or combined
+ok 14 - true same-token conflict is unchanged, not selected or combined
+  ---
+  duration_ms: 97.903289
+  type: 'test'
+  ...
+# Subtest: verify catches default whole-side acceptance; a hash-bound reason is required
+ok 15 - verify catches default whole-side acceptance; a hash-bound reason is required
+  ---
+  duration_ms: 222.356871
+  type: 'test'
+  ...
+# Subtest: review notes cannot omit either intent or actual verification disclosure
+ok 16 - review notes cannot omit either intent or actual verification disclosure
+  ---
+  duration_ms: 129.276022
+  type: 'test'
+  ...
+# Subtest: parses NUL index records, Unicode, whitespace and 64-character object IDs
+ok 17 - parses NUL index records, Unicode, whitespace and 64-character object IDs
+  ---
+  duration_ms: 1.529492
+  type: 'test'
+  ...
+# Subtest: real merge keeps both intents and stages; emits base, patches and full messages
+ok 18 - real merge keeps both intents and stages; emits base, patches and full messages
+  ---
+  duration_ms: 148.458794
+  type: 'test'
+  ...
+# Subtest: prepare is idempotent and preserves original worktree backup
+ok 19 - prepare is idempotent and preserves original worktree backup
+  ---
+  duration_ms: 154.985145
+  type: 'test'
+  ...
+# Subtest: never overwrites edits made before prepare
+ok 20 - never overwrites edits made before prepare
+  ---
+  duration_ms: 112.661264
+  type: 'test'
+  ...
+# Subtest: never overwrites edits made after prepare
+ok 21 - never overwrites edits made after prepare
+  ---
+  duration_ms: 118.516191
+  type: 'test'
+  ...
+# Subtest: applies only a clean native merge, preserving both changes
+ok 22 - applies only a clean native merge, preserving both changes
+  ---
+  duration_ms: 159.476743
+  type: 'test'
+  ...
+# Subtest: preserves CRLF worktree and canonical LF staged blob
+ok 23 - preserves CRLF worktree and canonical LF staged blob
+  ---
+  duration_ms: 137.189903
+  type: 'test'
+  ...
+# Subtest: supports SHA-256 repositories
+ok 24 - supports SHA-256 repositories
+  ---
+  duration_ms: 161.269707
+  type: 'test'
+  ...
+# Subtest: binary conflicts stay unresolved
+ok 25 - binary conflicts stay unresolved
+  ---
+  duration_ms: 106.165759
+  type: 'test'
+  ...
+# Subtest: leading dash, brackets, spaces and Unicode names are literal, not shell patterns
+ok 26 - leading dash, brackets, spaces and Unicode names are literal, not shell patterns
+  ---
+  duration_ms: 116.399121
+  type: 'test'
+  ...
+# Subtest: newline filenames survive snapshotting on POSIX
+ok 27 - newline filenames survive snapshotting on POSIX
+  ---
+  duration_ms: 119.897869
+  type: 'test'
+  ...
+# Subtest: custom merge attributes are not bypassed
+ok 28 - custom merge attributes are not bypassed
+  ---
+  duration_ms: 107.314836
+  type: 'test'
+  ...
+# Subtest: missing AUTO_MERGE proof disables automatic writes
+ok 29 - missing AUTO_MERGE proof disables automatic writes
+  ---
+  duration_ms: 110.471166
+  type: 'test'
+  ...
+# Subtest: add/add without a base is classified for manual resolution
+ok 30 - add/add without a base is classified for manual resolution
+  ---
+  duration_ms: 99.356874
+  type: 'test'
+  ...
+# Subtest: detects index mutation after snapshot
+ok 31 - detects index mutation after snapshot
+  ---
+  duration_ms: 147.940794
+  type: 'test'
+  ...
+# Subtest: verification fails before resolution and succeeds after staging actual result
+ok 32 - verification fails before resolution and succeeds after staging actual result
+  ---
+  duration_ms: 193.317966
+  type: 'test'
+  ...
+# Subtest: staging conflict markers does not count as resolution
+ok 33 - staging conflict markers does not count as resolution
+  ---
+  duration_ms: 133.675273
+  type: 'test'
+  ...
+# Subtest: an aborted or continued operation invalidates its old session
+ok 34 - an aborted or continued operation invalidates its old session
+  ---
+  duration_ms: 152.190683
+  type: 'test'
+  ...
+# Subtest: rebase identifies stage roles and the exact replayed commit
+ok 35 - rebase identifies stage roles and the exact replayed commit
+  ---
+  duration_ms: 111.196038
+  type: 'test'
+  ...
+# Subtest: cherry-pick context uses the replayed commit, not a guessed merge base
+ok 36 - cherry-pick context uses the replayed commit, not a guessed merge base
+  ---
+  duration_ms: 93.880368
+  type: 'test'
+  ...
+# Subtest: linked worktrees use their own actual Git directory and accept a subdirectory cwd
+ok 37 - linked worktrees use their own actual Git directory and accept a subdirectory cwd
+  ---
+  duration_ms: 106.064534
+  type: 'test'
+  ...
+# Subtest: submodule divergence merges locally, keeps parent conflict, and pins only after commit
+ok 38 - submodule divergence merges locally, keeps parent conflict, and pins only after commit
+  ---
+  duration_ms: 517.031723
+  type: 'test'
+  ...
+# Subtest: submodule preparation resumes without resetting partially resolved work
+ok 39 - submodule preparation resumes without resetting partially resolved work
+  ---
+  duration_ms: 293.938212
+  type: 'test'
+  ...
+# Subtest: dirty submodule is not switched, reset or staged
+ok 40 - dirty submodule is not switched, reset or staged
+  ---
+  duration_ms: 225.829745
+  type: 'test'
+  ...
+# Subtest: retains committed local descendants as the submodule merge start
+ok 41 - retains committed local descendants as the submodule merge start
+  ---
+  duration_ms: 358.535969
+  type: 'test'
+  ...
+# Subtest: pin requires explicit review, never picks one divergent side
+ok 42 - pin requires explicit review, never picks one divergent side
+  ---
+  duration_ms: 270.941177
+  type: 'test'
+  ...
+# Subtest: verification catches manually accepting only the local gitlink
+ok 43 - verification catches manually accepting only the local gitlink
+  ---
+  duration_ms: 243.738752
+  type: 'test'
+  ...
+# Subtest: fast-forward submodule selects a descendant, not a timestamp, and still defers pinning
+ok 44 - fast-forward submodule selects a descendant, not a timestamp, and still defers pinning
+  ---
+  duration_ms: 380.6629
+  type: 'test'
+  ...
+# Subtest: shallow histories are blocked instead of being called divergent
+ok 45 - shallow histories are blocked instead of being called divergent
+  ---
+  duration_ms: 217.217172
+  type: 'test'
+  ...
+# Subtest: missing submodule objects do not cause an arbitrary pin
+ok 46 - missing submodule objects do not cause an arbitrary pin
+  ---
+  duration_ms: 222.319716
+  type: 'test'
+  ...
+# Subtest: uninitialized submodule never falls through to operating on its parent
+ok 47 - uninitialized submodule never falls through to operating on its parent
+  ---
+  duration_ms: 228.793043
+  type: 'test'
+  ...
+# Subtest: command lock prevents two resolver processes from writing together
+ok 48 - command lock prevents two resolver processes from writing together
+  ---
+  duration_ms: 108.613019
+  type: 'test'
+  ...
+# Subtest: CLI returns exit 2 for unresolved verification and valid JSON
+ok 49 - CLI returns exit 2 for unresolved verification and valid JSON
+  ---
+  duration_ms: 179.735279
+  type: 'test'
+  ...
+# Subtest: automatic staging leaves unrelated staged work untouched
+ok 50 - automatic staging leaves unrelated staged work untouched
+  ---
+  duration_ms: 120.224815
+  type: 'test'
+  ...
+# Subtest: symlink conflicts remain manual and never write through the link
+ok 51 - symlink conflicts remain manual and never write through the link
+  ---
+  duration_ms: 93.627592
+  type: 'test'
+  ...
+# Subtest: submodule initialization with a verified local URL does not resolve the parent pointer
+ok 52 - submodule initialization with a verified local URL does not resolve the parent pointer
+  ---
+  duration_ms: 292.639439
+  type: 'test'
+  ...
+# Subtest: submodule checkout refuses to overwrite an ignored local file
+ok 53 - submodule checkout refuses to overwrite an ignored local file
+  ---
+  duration_ms: 284.767488
+  type: 'test'
+  ...
+# Subtest: installer copies a self-contained skill and refuses silent replacement
+ok 54 - installer copies a self-contained skill and refuses silent replacement
+  ---
+  duration_ms: 131.838652
+  type: 'test'
+  ...
+# Subtest: word merge combines independent changes within one Git-conflicted line
+ok 55 - word merge combines independent changes within one Git-conflicted line
+  ---
+  duration_ms: 5.169169
+  type: 'test'
+  ...
+# Subtest: swapping ours and theirs does not change a successful result
+ok 56 - swapping ours and theirs does not change a successful result
+  ---
+  duration_ms: 0.408186
+  type: 'test'
+  ...
+# Subtest: same numeric token is never character-blended
+ok 57 - same numeric token is never character-blended
+  ---
+  duration_ms: 0.755302
+  type: 'test'
+  ...
+# Subtest: same identifier token is never character-blended
+ok 58 - same identifier token is never character-blended
+  ---
+  duration_ms: 0.178876
+  type: 'test'
+  ...
+# Subtest: quoted strings and templates stay atomic on competing edits
+ok 59 - quoted strings and templates stay atomic on competing edits
+  ---
+  duration_ms: 0.37048
+  type: 'test'
+  ...
+# Subtest: competing line-comment edits are not silently concatenated
+ok 60 - competing line-comment edits are not silently concatenated
+  ---
+  duration_ms: 0.121781
+  type: 'test'
+  ...
+# Subtest: same-position competing insertions and delete/modify stay conflicted
+ok 61 - same-position competing insertions and delete/modify stay conflicted
+  ---
+  duration_ms: 0.144234
+  type: 'test'
+  ...
+# Subtest: identity rules preserve additions and deletions with no contradictory edit
+ok 62 - identity rules preserve additions and deletions with no contradictory edit
+  ---
+  duration_ms: 0.109042
+  type: 'test'
+  ...
+# Subtest: whitespace-only disagreements are not ignored
+ok 63 - whitespace-only disagreements are not ignored
+  ---
+  duration_ms: 0.28944
+  type: 'test'
+  ...
+# Subtest: lossless tokenization preserves Unicode, emoji, BOM, tabs and CRLF
+ok 64 - lossless tokenization preserves Unicode, emoji, BOM, tabs and CRLF
+  ---
+  duration_ms: 1.281003
+  type: 'test'
+  ...
+# Subtest: unclosed literals and comments are rejected by the tokenizer
+ok 65 - unclosed literals and comments are rejected by the tokenizer
+  ---
+  duration_ms: 0.140859
+  type: 'test'
+  ...
+# Subtest: literal Object prototype property names do not corrupt upstream diff lookup
+ok 66 - literal Object prototype property names do not corrupt upstream diff lookup
+  ---
+  duration_ms: 0.088201
+  type: 'test'
+  ...
+# Subtest: ambiguous repeated-token alignment is left for the Agent
+ok 67 - ambiguous repeated-token alignment is left for the Agent
+  ---
+  duration_ms: 0.13452
+  type: 'test'
+  ...
+# Subtest: resource limits refuse large or highly repetitive fine-grained diffs
+ok 68 - resource limits refuse large or highly repetitive fine-grained diffs
+  ---
+  duration_ms: 0.890673
+  type: 'test'
+  ...
+# Subtest: partial refinement changes only the simple hunk, retaining the other block verbatim
+ok 69 - partial refinement changes only the simple hunk, retaining the other block verbatim
+  ---
+  duration_ms: 0.553752
+  type: 'test'
+  ...
+# Subtest: malformed or nested candidate markers never authorize a write
+ok 70 - malformed or nested candidate markers never authorize a write
+  ---
+  duration_ms: 0.104445
+  type: 'test'
+  ...
+# Subtest: collision-free generated marker size preserves literal marker-like content
+ok 71 - collision-free generated marker size preserves literal marker-like content
+  ---
+  duration_ms: 0.464981
+  type: 'test'
+  ...
+# Subtest: single-line files without final newline stay without final newline
+ok 72 - single-line files without final newline stay without final newline
+  ---
+  duration_ms: 0.308328
+  type: 'test'
+  ...
+# Subtest: unterminated multiline EOF is conservatively left to the Agent
+ok 73 - unterminated multiline EOF is conservatively left to the Agent
+  ---
+  duration_ms: 0.084266
+  type: 'test'
+  ...
+# Subtest: bounded property check: 250 independent field edits retain both sides and are symmetric
+ok 74 - bounded property check: 250 independent field edits retain both sides and are symmetric
+  ---
+  duration_ms: 24.525675
+  type: 'test'
+  ...
+1..74
+# tests 74
+# suites 0
+# pass 74
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 6938.672137

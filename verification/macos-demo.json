@@ -1,0 +1,15 @@
+{
+  "version": "0.2.0",
+  "node": "v22.22.3",
+  "platform": "darwin",
+  "git": "git version 2.54.0 (Apple Git-157)",
+  "genuineNativeGitConflict": true,
+  "beforeConflictBlocks": 2,
+  "afterConflictBlocks": 1,
+  "simpleHunksResolved": 1,
+  "indexRemainsUnmerged": true,
+  "combinedFirstLine": "const options = { retries: 3, timeout: 2000 };",
+  "remainingConflict": "competing mode values",
+  "verified": true,
+  "semanticsVerified": false
+}
