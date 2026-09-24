@@ -149,10 +149,6 @@ node scripts/demo.mjs
 
 本工具不是执行沙箱，也不保证面对其他 Git 客户端的事务隔离。不与其他 Agent/编辑器同时写同一个 worktree。停止或中断时先检查本地会话备份和 journal，不能强制重置。
 
-## 个人仓库辅助发布
-
-首次创建个人仓库时，可显式运行 `node scripts/publish.mjs --public`。需本机已登录 GitHub CLI，且登录账号为 `Ga-hou`；脚本只创建 `Ga-hou/git-conflict-resolver`。省略 `--public` 时默认创建 private 仓库，遇到已有仓库或 remote 时停止，不会更新已有远端。仓库创建后，使用常规 Git 提交和 push 流程维护。
-
 ## 许可证
 
 本项目采用 [MIT License](LICENSE)。第三方代码的来源和许可证见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。

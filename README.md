@@ -149,10 +149,6 @@ node scripts/demo.mjs
 
 The tool is not an execution sandbox and does not provide transactional isolation from other Git clients. Avoid concurrent writes to the same worktree by other Agents or editors. After an interruption, inspect local session backups and the journal; do not force a reset.
 
-## Personal repository publishing helper
-
-For first-time repository creation, explicitly run `node scripts/publish.mjs --public`. The helper requires GitHub CLI authenticated as `Ga-hou` and only creates `Ga-hou/git-conflict-resolver`. Without `--public`, it defaults to a private repository. It stops if the repository or a local remote already exists and does not update existing remotes. After creation, maintain the repository with the normal Git commit and push workflow.
-
 ## License
 
 This project is licensed under the [MIT License](LICENSE). See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) for third-party attribution and licenses.
